@@ -80,19 +80,24 @@ function addNewRowData() {
     // Writing to our file
     reader.writeFile(file, fileName);
 
-    // const sheet = file.Sheets[file.SheetNames[0]];
-    // const cellRef = reader.utils.encode_cell({ c: 0, r: 3 });
-    // const cell = sheet[cellRef];
-    // if (cell) {
-    //     // update existing cell
-    //     cell.v = 'Name Edited in existing column';
-    // } else {
-    //     // add new cell
-    //     reader.utils.sheet_add_aoa(sheet, [['Name Added in new column']], { origin: cellRef });
-    // }
-    // reader.writeFile(file, fileName);
 }
+
+function editExistingData() {
+    const sheet = file.Sheets[file.SheetNames[0]];
+    const cellRef = reader.utils.encode_cell({ c: 0, r: 3 });
+    const cell = sheet[cellRef];
+    if (cell) {
+        // update existing cell
+        cell.v = 'Name Edited in existing column';
+    } else {
+        // add new cell
+        reader.utils.sheet_add_aoa(sheet, [['Name Added in new column']], { origin: cellRef });
+    }
+    reader.writeFile(file, fileName);
+}
+
 
 // allSheetData();
 // readSheetData();
-addNewRowData();
+// addNewRowData();
+editExistingData();
