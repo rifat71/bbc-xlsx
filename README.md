@@ -1,7 +1,7 @@
 ## In this project you will find two js file which will act accordingly:
 
 Language - |Javascript|
-|--|
+|--|--|
 
 **test.js** - `Write, Read and Edit data in xlsx file.`
 
