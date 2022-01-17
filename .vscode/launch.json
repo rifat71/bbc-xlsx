@@ -9,9 +9,9 @@
             "request": "launch",
             "name": "Cucumber Tests",
             "console": "integratedTerminal",
-            "program": "${workspaceRoot}/script/test.js",
+            "program": "${workspaceRoot}/script/test2.js",
             "windows": {
-                "program": "${workspaceRoot}/script/test.js",
+                "program": "${workspaceRoot}/script/test2.js",
             },
             "args": [
                 "-t",

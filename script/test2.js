@@ -40,7 +40,7 @@ setTimeout(async function getBbcData() {
     }
 
     let checkList = [];
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < refLink.length; i++) {
         let description = null;
         let headline = null;
         await driver.get(refLink[i]);
