@@ -1,4 +1,4 @@
-const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 const cheerio = require("cheerio");
 
 // function to get the raw data
@@ -22,12 +22,10 @@ const getCricketWorldCupsList = async () => {
 
    // extracting the table data
    const worldCupsDataTable = parsedCricketWorldCupData("table.wikitable")[0].children[1].children;
-console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-console.log(parsedCricketWorldCupData);
    console.log("Year --- Winner --- Runner");
    worldCupsDataTable.forEach((row) => {
-       console.log("1");
-      extracting `td` tags
+      console.log("1");
+      // extracting `td` tags
       if (row.name === "tr") {
          let year = null,
             winner = null,
